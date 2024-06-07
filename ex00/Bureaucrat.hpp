@@ -1,6 +1,11 @@
 #ifndef BUROCRAT_H
 #define BUROCRAT_H
 
+#define ORANGE "\033[33m"
+#define MAGENTA "\033[35m"
+#define LIGHT_BLUE "\033[94m"
+#define RESET "\033[0m"
+
 #include <iostream>
 
 class Bureaucrat

@@ -14,6 +14,12 @@ int main()
         std::cout << internship << std::endl;
         intern.signForm(internship);
         boss.signForm(internship);
+        Bureaucrat maher("Maher", 143);
+        maher.promote();
+        maher.promote();
+        maher.promote();
+        Form permission("Laser Game", 140, 145);
+        maher.signForm(permission);
     }
     catch (const std::exception &e)
     {

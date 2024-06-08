@@ -4,6 +4,8 @@
 #define ORANGE "\033[33m"
 #define MAGENTA "\033[35m"
 #define LIGHT_BLUE "\033[94m"
+#define OKGREEN "\033[92m"
+#define NOKRED "\033[91m"
 #define RESET "\033[0m"
 
 #include "Form.hpp"

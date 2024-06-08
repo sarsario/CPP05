@@ -64,6 +64,13 @@ const char *Form::GradeTooLowException::what() const throw()
     return "Grade is too low.";
 }
 
+void Form::beSigned(Bureaucrat &bureaucrat)
+{
+    if (bureaucrat.getGrade() > this->getSignGrade())
+        throw Form::GradeTooLowException();
+    this->_signed = true;
+}
+
 std::ostream &operator<<(std::ostream &out, Form const &form)
 {
     out << "Form " << form.getName() << " is ";

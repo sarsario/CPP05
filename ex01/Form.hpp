@@ -6,6 +6,9 @@
 #define RESET "\033[0m"
 
 #include "Bureaucrat.hpp"
+#include <iostream>
+
+class Bureaucrat;
 
 class Form
 {

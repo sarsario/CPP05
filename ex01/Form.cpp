@@ -2,7 +2,7 @@
 
 Form::Form() : _name("default"), _signed(false), _signGrade(150), _execGrade(150)
 {
-    std::cout << "Form " << _name << " created" << std::endl;
+    std::cout << LIGHT_BLUE << "Form " << _name << " created" << RESET << std::endl;
 }
 
 Form::Form(std::string const name, int const signGrade, int const execGrade)
@@ -12,7 +12,7 @@ Form::Form(std::string const name, int const signGrade, int const execGrade)
         throw Form::GradeTooHighException();
     else if (signGrade > 150 || execGrade > 150)
         throw Form::GradeTooLowException();
-    std::cout << "Form " << _name << " created" << std::endl;
+    std::cout << LIGHT_BLUE << "Form " << _name << " created" << RESET << std::endl;
 }
 
 Form::Form(Form const &src)
@@ -25,13 +25,13 @@ Form &Form::operator=(Form const &src)
 {
     if (this != &src)
         this->_signed = src.getSigned();
-    std::cout << "Form " << _name << " created" << std::endl;
+    std::cout << LIGHT_BLUE << "Form " << _name << " created" << RESET << std::endl;
     return *this;
 }
 
 Form::~Form()
 {
-    std::cout << "Form " << _name << " destroyed" << std::endl;
+    std::cout << LIGHT_BLUE << "Form " << _name << " destroyed" << RESET << std::endl;
 }
 
 std::string Form::getName() const

@@ -2,7 +2,7 @@
 
 Bureaucrat::Bureaucrat() : _name("default"), _grade(150)
 {
-    std::cout << "Bureaucrat " << _name << " created" << std::endl;
+    std::cout << MAGENTA << "Bureaucrat " << _name << " created" << RESET << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const &src) : _name(src.getName())
@@ -16,13 +16,13 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &src)
     {
         this->_grade = src.getGrade();
     }
-    std::cout << "Bureaucrat " << _name << " created" << std::endl;
+    std::cout << MAGENTA << "Bureaucrat " << _name << " created" << RESET << std::endl;
     return *this;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat " << _name << " destroyed" << std::endl;
+    std::cout << MAGENTA << "Bureaucrat " << _name << " destroyed" << RESET << std::endl;
 }
 
 Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name)
@@ -32,7 +32,7 @@ Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name)
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
     this->_grade = grade;
-    std::cout << "Bureaucrat " << _name << " created" << std::endl;
+    std::cout << MAGENTA << "Bureaucrat " << _name << " created" << RESET << std::endl;
 }
 
 std::string Bureaucrat::getName() const

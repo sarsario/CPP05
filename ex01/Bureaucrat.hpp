@@ -1,7 +1,6 @@
-#ifndef BUROCRAT_H
-#define BUROCRAT_H
+#ifndef BUREAUCRAT_H
+#define BUREAUCRAT_H
 
-#define ORANGE "\033[33m"
 #define MAGENTA "\033[35m"
 #define LIGHT_BLUE "\033[94m"
 #define OKGREEN "\033[92m"

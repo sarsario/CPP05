@@ -92,4 +92,5 @@ std::ostream &operator<<(std::ostream &out, AForm const &form)
         out << NOKRED << "not signed" << RESET;
     out << " and requires grade " << form.getSignGrade() << " to be signed and grade " << form.getExecGrade()
         << " to be executed";
+    return out;
 }

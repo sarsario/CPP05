@@ -7,10 +7,10 @@
 #define NOKRED "\033[91m"
 #define RESET "\033[0m"
 
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <iostream>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -36,7 +36,8 @@ class Bureaucrat
         virtual const char *what() const throw();
     };
 
-    void signForm(Form &form);
+    void signForm(AForm &form);
+    void executeForm(AForm const &form);
 
   private:
     std::string const _name;

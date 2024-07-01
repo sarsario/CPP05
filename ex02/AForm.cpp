@@ -26,7 +26,7 @@ AForm &AForm::operator=(AForm const &src)
     std::cout << LIGHT_BLUE << "AForm assignation operator called" << RESET << std::endl;
     if (this != &src)
     {
-        _signed = src._signed;
+        throw AForm::AssignationException();
     }
     return *this;
 }
@@ -64,6 +64,16 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
     return "Grade is too low";
+}
+
+const char *AForm::AssignationException::what() const throw()
+{
+    return "Cannot assign a form to another";
+}
+
+const char *AForm::UnsignedFormException::what() const throw()
+{
+    return "Form is not signed";
 }
 
 void AForm::beSigned(Bureaucrat &bureaucrat)

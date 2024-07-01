@@ -1,19 +1,21 @@
 #pragma once
 
 #include "AForm.hpp"
+#include <fstream>
 #include <iostream>
+#define PURPLE "\033[95m"
 
 class ShrubberyCreationForm : public AForm
 {
   public:
-    ShrubberyCreationForm(std::string const target);
+    ShrubberyCreationForm();
+    ShrubberyCreationForm(std::string target);
     ShrubberyCreationForm(ShrubberyCreationForm const &src);
     ShrubberyCreationForm &operator=(ShrubberyCreationForm const &src);
-    virtual ~ShrubberyCreationForm();
+    ~ShrubberyCreationForm();
 
     void execute(Bureaucrat const &executor) const;
 
   private:
-    ShrubberyCreationForm();
-    std::string const _target;
+    std::string _target;
 };

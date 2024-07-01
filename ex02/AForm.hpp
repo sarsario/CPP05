@@ -14,10 +14,6 @@ class Bureaucrat;
 class AForm
 {
   public:
-    AForm();
-    AForm(std::string const name, int const signGrade, int const execGrade);
-    AForm(AForm const &src);
-    AForm &operator=(AForm const &src);
     virtual ~AForm();
 
     std::string getName() const;
@@ -51,6 +47,12 @@ class AForm
 
     void beSigned(Bureaucrat &bureaucrat);
     virtual void execute(Bureaucrat const &executor) const = 0;
+
+  protected:
+    AForm();
+    AForm(std::string const name, int const signGrade, int const execGrade);
+    AForm(AForm const &src);
+    AForm &operator=(AForm const &src);
 
   private:
     std::string const _name;

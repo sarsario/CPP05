@@ -24,8 +24,9 @@ Form::Form(Form const &src)
 Form &Form::operator=(Form const &src)
 {
     if (this != &src)
-        this->_signed = src.getSigned();
-    std::cout << LIGHT_BLUE << "Form " << _name << " created" << RESET << std::endl;
+    {
+        throw Form::AssignationException();
+    }
     return *this;
 }
 
@@ -62,6 +63,11 @@ const char *Form::GradeTooHighException::what() const throw()
 const char *Form::GradeTooLowException::what() const throw()
 {
     return "Grade is too low.";
+}
+
+const char *Form::AssignationException::what() const throw()
+{
+    return "Assignation operator called on Class with const attributes.";
 }
 
 void Form::beSigned(Bureaucrat &bureaucrat)

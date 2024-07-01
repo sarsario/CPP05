@@ -35,6 +35,11 @@ class Form
         virtual const char *what() const throw();
     };
 
+    class AssignationException : public std::exception
+    {
+        virtual const char *what() const throw();
+    };
+
     void beSigned(Bureaucrat &bureaucrat);
 
   private:

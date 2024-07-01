@@ -1,7 +1,6 @@
 #pragma once
 
 #include "AForm.hpp"
-#include <fstream>
 #define GREY "\033[90m"
 
 class RobotomyRequestForm : public AForm

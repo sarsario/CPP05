@@ -14,7 +14,8 @@ Intern::Intern(Intern const &src)
 Intern &Intern::operator=(Intern const &src)
 {
     std::cout << YELLOW << "Intern assignation operator called" << RESET << std::endl;
-    *this = src;
+    if (this == &src)
+        return *this;
     return *this;
 }
 
@@ -42,7 +43,7 @@ AForm *Intern::makeForm(std::string const formName, std::string const target)
     AForm *(*forms[])(std::string const target) = {&makeShrubberyForm, &makeRobotomyForm, &makePresidentialForm};
     std::string knownForms[] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm", "Shrubbery", "Robotomy", "Presidential", "shrubbery request", "robotomy request", "presidential request", "tree", "robot", "pardon"};
 
-    for (int i = 0; i < (sizeof(knownForms) / sizeof(knownForms[0])); i++)
+    for (int i = 0; i < (int)(sizeof(knownForms) / sizeof(knownForms[0])); i++)
     {
         if (formName == knownForms[i])
         {

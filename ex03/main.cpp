@@ -10,6 +10,7 @@ int main()
        Bureaucrat engineer("engineer", 45);
        Bureaucrat president("president", 1);
        AForm *tree = stan.makeForm("tree", "parking");
+       AForm *pardon = stan.makeForm("Presidential", "engineer");
 
         junior.signForm(*tree);
         engineer.signForm(*tree);
@@ -22,7 +23,11 @@ int main()
             engineer.executeForm(*workVisa);
             delete workVisa;
         }
+        president.executeForm(*pardon);
+        president.signForm(*pardon);
+        president.executeForm(*pardon);
         delete tree;
+        delete pardon;
     }
     catch (const std::exception &e)
     {

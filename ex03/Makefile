@@ -11,7 +11,8 @@ SRCS	=	main.cpp \
 			AForm.cpp \
 			ShrubberyCreationForm.cpp \
 			RobotomyRequestForm.cpp \
-			PresidentialPardonForm.cpp
+			PresidentialPardonForm.cpp \
+			Intern.cpp
 
 OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 

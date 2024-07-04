@@ -1,6 +1,6 @@
 # VARIABLES
 
-NAME	=	bureau
+NAME	=	bureau.exe
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
